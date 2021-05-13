@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.derecha {
+  text-align: right;
+}
+
+.izquierda {
+  text-align: left;
+}
+
+.mitad {
+  padding: 0 1%;
+  width: 48%;
+}
+
+.cuarta {
+  padding: 0 1%;
+  width: 48%;
+}
+
+.completo {
+  padding: 0 1%;
+  width: 98%;
+}
+
+.btn-crear {
+  margin: 10px 5px !important;
+}
+
+.imagen {
+  max-height: 190px;
+}
+
+.bloqueado {
+  background-color: #a1a1a1;
+  /* pointer-events: none; */
+}
+
+.titulo {
+  font-weight: bold;
+}

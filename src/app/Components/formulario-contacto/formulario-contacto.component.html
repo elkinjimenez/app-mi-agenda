@@ -1,0 +1,36 @@
+<h1 class="centrado"><span *ngIf="contacto.id">Editar</span> <span *ngIf="!contacto.id">Nuevo</span> contacto</h1>
+<div class="derecha">
+  <button mat-fab color="primary" (click)="agregarContacto()" class="btn-crear"><span
+      *ngIf="contacto.id">Editar</span><span *ngIf="!contacto.id">Nuevo</span></button>
+</div>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Nombres</mat-label>
+  <input [(ngModel)]="contacto.nombre" matInput>
+</mat-form-field>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Apellidos</mat-label>
+  <input [(ngModel)]="contacto.apellido" matInput>
+</mat-form-field>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Dirección</mat-label>
+  <input [(ngModel)]="contacto.direccion" matInput>
+</mat-form-field>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Teléfono</mat-label>
+  <input [(ngModel)]="contacto.telefono" matInput>
+</mat-form-field>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Correo</mat-label>
+  <input [(ngModel)]="contacto.correo" matInput>
+</mat-form-field>
+<mat-form-field class="mitad" appearance="fill">
+  <mat-label>Activo?</mat-label>
+  <mat-select [(ngModel)]="contacto.estado">
+    <mat-option value="true">Si</mat-option>
+    <mat-option value="false">No</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field class="completo" appearance="fill">
+  <mat-label>Imagen</mat-label>
+  <input [(ngModel)]="contacto.imagen" matInput>
+</mat-form-field>
