@@ -1,23 +1,30 @@
 <mat-card [ngClass]="{'bloqueado': !contacto.estado}" style="display: flex;">
-  <div class="mitad">
+  <div class="w-25">
     <img class="imagen" src="{{contacto.imagen}}" alt="">
   </div>
-  <div class="mitad">
+  <div class="w-50">
     <mat-list role="list">
-      <mat-list-item role="listitem">
-        <h1>{{contacto.nombre}} {{contacto.apellido}}</h1>
-      </mat-list-item>
+      <mat-list-item role="listitem" class="titulo">{{contacto.nombre}} {{contacto.apellido}}</mat-list-item>
       <mat-list-item role="listitem">{{contacto.telefono}} - {{contacto.correo}}</mat-list-item>
       <mat-list-item role="listitem">{{contacto.direccion}}</mat-list-item>
+    </mat-list>
+  </div>
+  <div class="w-25">
+    <mat-list role="list">
       <mat-list-item role="listitem">
         <button routerLink="/editar-contacto/{{contacto.id}}" mat-raised-button color="primary">Editar</button>
-        <button (click)="cambioEstado(contacto)" *ngIf="!contacto.estado" style="margin: 0 10px;" mat-raised-button
-          color="accent">Es amigo</button>
-        <button (click)="cambioEstado(contacto)" *ngIf="contacto.estado" style="margin: 0 10px;" mat-raised-button
-          color="warn">Es conocido</button>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <button (click)="cambioEstado(contacto)" *ngIf="!contacto.estado" mat-raised-button color="accent">Es
+          amigo</button>
+        <button (click)="cambioEstado(contacto)" *ngIf="contacto.estado" mat-raised-button color="warn">Es
+          conocido</button>
+      </mat-list-item>
+      <mat-list-item role="listitem">
         <button (click)="openDialog(contacto)" mat-raised-button color="warn">Eliminar</button>
       </mat-list-item>
     </mat-list>
+
   </div>
 </mat-card>
 <br>
