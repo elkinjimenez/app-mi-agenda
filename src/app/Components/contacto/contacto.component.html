@@ -4,24 +4,57 @@
   </div>
   <div class="w-50">
     <mat-list role="list">
-      <mat-list-item role="listitem" class="titulo">{{contacto.nombre}} {{contacto.apellido}}</mat-list-item>
-      <mat-list-item role="listitem">{{contacto.telefono}} - {{contacto.correo}}</mat-list-item>
-      <mat-list-item role="listitem">{{contacto.direccion}}</mat-list-item>
+      <mat-list-item role="listitem" class="titulo">
+        <div class="borrar">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        {{contacto.nombre}} {{contacto.apellido}}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <div class="borrar">
+          <mat-icon>contact_phone</mat-icon>
+        </div>
+        {{contacto.telefono}} -
+        {{contacto.correo}}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <div class="borrar">
+          <mat-icon>travel_explore</mat-icon>
+        </div>
+        {{contacto.direccion}}
+      </mat-list-item>
     </mat-list>
   </div>
   <div class="w-25">
     <mat-list role="list">
       <mat-list-item role="listitem">
-        <button routerLink="/editar-contacto/{{contacto.id}}" mat-raised-button color="primary">Editar</button>
+        <button routerLink="/editar-contacto/{{contacto.id}}" mat-raised-button class="btn-t" color="primary">
+          <span class="mostrar">
+            <mat-icon>edit</mat-icon>
+          </span>
+          <span class="borrar">Actualizar</span>
+        </button>
       </mat-list-item>
       <mat-list-item role="listitem">
-        <button (click)="cambioEstado(contacto)" *ngIf="!contacto.estado" mat-raised-button color="accent">Es
-          amigo</button>
-        <button (click)="cambioEstado(contacto)" *ngIf="contacto.estado" mat-raised-button color="warn">Es
-          conocido</button>
+        <button (click)="cambioEstado(contacto)" mat-raised-button class="btn-t" color="accent">
+          <span class="mostrar">
+            <mat-icon>lock_open</mat-icon>
+          </span>
+          <span class="borrar" *ngIf="!contacto.estado">
+            Desbloquear
+          </span>
+          <span class="borrar" *ngIf="contacto.estado">
+            Bloquear
+          </span>
+        </button>
       </mat-list-item>
       <mat-list-item role="listitem">
-        <button (click)="openDialog(contacto)" mat-raised-button color="warn">Eliminar</button>
+        <button (click)="openDialog(contacto)" mat-raised-button class="btn-t" color="warn">
+          <span class="mostrar">
+            <mat-icon>delete_forever</mat-icon>
+          </span>
+          <span class="borrar">Eliminar</span>
+        </button>
       </mat-list-item>
     </mat-list>
 

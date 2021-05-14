@@ -38,11 +38,6 @@ body {
   width: 50%;
 }
 
-.cuarta {
-  padding: 0 1%;
-  width: 48%;
-}
-
 .completo {
   padding: 0 1%;
   width: 98%;
@@ -64,4 +59,38 @@ body {
 
 .titulo {
   font-weight: bold;
+}
+
+.btn-t {
+  width: 100%;
+}
+
+.icono {
+  margin-right: 5px;
+  display: block;
+}
+
+.mostrar {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mitad {
+    width: 100%;
+  }
+  .w-25 {
+    width: 100%;
+  }
+  .w-50 {
+    width: 100%;
+  }
+  .borrar {
+    display: none;
+    background-color: red;
+  }
+  .mostrar {
+    display: block;
+    padding: 5px 0 0 0;
+    line-height: 24px;
+  }
 }
