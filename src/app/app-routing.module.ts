@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactosComponent } from './Components/contactos/contactos.component';
-import { FormularioContactoComponent } from './Components/formulario-contacto/formulario-contacto.component';
-import { InicioComponent } from './Components/inicio/inicio.component';
+import { ContactosComponent } from './Agenda/contactos/contactos.component';
+import { FormularioContactoComponent } from './Agenda/formulario-contacto/formulario-contacto.component';
+import { InicioComponent } from './Agenda/inicio/inicio.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},

@@ -1,12 +1,6 @@
-export interface Contacto {
-  createdAt: number;
-  updatedAt: number;
-  id: number;
-  nombre: string;
-  apellido: string;
+import { Persona } from "./persona";
+
+export interface Contacto extends Persona { 
   direccion: string;
-  correo: string;
   telefono: number;
-  imagen: string;
-  estado: boolean;
 }

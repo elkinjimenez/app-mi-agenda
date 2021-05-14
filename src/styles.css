@@ -74,6 +74,10 @@ body {
   display: none;
 }
 
+.contenedor {
+  padding: 40px;
+}
+
 @media only screen and (max-width: 1000px) {
   .mitad {
     width: 100%;
@@ -92,5 +96,9 @@ body {
     display: block;
     padding: 5px 0 0 0;
     line-height: 24px;
+  }
+
+  .contenedor {
+    padding: 15px;
   }
 }
