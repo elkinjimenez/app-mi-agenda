@@ -1,11 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Elkin J</mat-toolbar>
+    <mat-toolbar>Elkin Jiménez</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="">Inicio</a>
       <a mat-list-item routerLink="contactos">Mis contactos</a>
       <a mat-list-item routerLink="nuevo-contacto">Nuevo contacto</a>
+      <a mat-list-item routerLink="registro-usuario">Registro de usuario (temporal aquí)</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -19,6 +20,12 @@
     <div class="padding">
       <div *ngIf="_contacto.hayContactos">
         <router-outlet></router-outlet>
+      </div>
+      <div *ngIf="!_contacto.hayContactos">
+        <h1 style="font-weight: bold;">Aviso importante...</h1>
+        <h1>El proyecto backend debe estar desplegado para que el aplicativo cargue sus componentes completos.</h1>
+        <h3>Al clonar el backend, ejecutar el comando:  <code style="font-weight: bold;">sails lift</code>, y la base de datos activa y funcionando.</h3>
+       
       </div>
     </div>
   </mat-sidenav-content>

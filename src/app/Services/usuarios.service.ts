@@ -8,6 +8,8 @@ import { Usuario } from '../Interfaces/usuario';
 })
 export class UsuariosService {
 
+  login = false;
+
   responseUsuario = {} as RespAgenda;
 
   constructor(

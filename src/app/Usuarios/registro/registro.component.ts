@@ -24,6 +24,7 @@ export class RegistroComponent implements OnInit {
       data => {
         console.log('Agregado: ', data);
         // this._usuario.getContactos();
+        this._usuario.login = true;
         alert('Great');
       }
     )
