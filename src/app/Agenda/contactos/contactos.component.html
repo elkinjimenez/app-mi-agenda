@@ -1,4 +1,13 @@
 <h1>Listado de contactos:</h1>
-<div *ngFor="let contacto of _contactos.contactos">
-  <app-contacto [contacto]="contacto"></app-contacto>
+<div *ngIf="_contactos.contactos.length > 0 ">
+  <div *ngFor="let contacto of _contactos.contactos">
+    <app-contacto [contacto]="contacto"></app-contacto>
+  </div>
+</div>
+<div *ngIf="_contactos.contactos.length == 0 ">
+  <h1 class="alerta">No hay usuarios para mostrar</h1>
+  <h4>Registre nuevos contactos</h4>
+  <button routerLink="/nuevo-contacto" mat-raised-button color="primary">
+    Nuevo contacto
+  </button>
 </div>

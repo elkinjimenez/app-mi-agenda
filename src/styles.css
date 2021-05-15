@@ -61,6 +61,11 @@ body {
   font-weight: bold;
 }
 
+.alerta {
+  font-weight: bold !important;
+  color: red;
+}
+
 .btn-t {
   width: 100%;
 }
@@ -97,7 +102,6 @@ body {
     padding: 5px 0 0 0;
     line-height: 24px;
   }
-
   .contenedor {
     padding: 15px;
   }

@@ -22,7 +22,7 @@
         <router-outlet></router-outlet>
       </div>
       <div *ngIf="!_contacto.hayContactos">
-        <h1 style="font-weight: bold;">Aviso importante...</h1>
+        <h1 class="alerta">Aviso importante...</h1>
         <h1>El proyecto backend debe estar desplegado para que el aplicativo cargue sus componentes completos.</h1>
         <h3>Al clonar el backend, ejecutar el comando:  <code style="font-weight: bold;">sails lift</code>, y la base de datos activa y funcionando.</h3>
        
